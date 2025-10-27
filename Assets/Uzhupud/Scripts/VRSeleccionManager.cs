@@ -1,24 +1,21 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class IdScene
+public class PisoUIData
 {
-    public string id;
+    public Sprite imagen;
+    public string nombre;
+    public int level;
+    public bool ingresable;
     public string sceneName;
 }
 
 public class VRSeleccionManager : MonoBehaviour
 {
-    public UnityEvent<string> OnSeleccionConId;
-    public GameObject uiConCarga;
-    public GameObject uiSinCarga;
-    public List<IdScene> idsConCarga = new List<IdScene>(); // agrega {id="2",sceneName="EscenaPiso2"} y {id="8",sceneName="EscenaPiso8"}
+    public static UnityAction<PisoUIData> OnUIData;
+    public GameObject menuRoot;
 
-    private VRSelectable actual;
-    private string escenaPendiente;
+    VRSelectable actual;
 
     public void Seleccionar(VRSelectable nuevo)
     {
@@ -28,11 +25,23 @@ public class VRSeleccionManager : MonoBehaviour
         actual = nuevo;
         if (actual != null) actual.SetActivo(true);
 
-        OnSeleccionConId?.Invoke(nuevo.id);
+        if (menuRoot != null) menuRoot.SetActive(actual != null);
 
-        var tieneCarga = TryGetSceneForId(nuevo.id, out escenaPendiente);
-        if (uiConCarga != null) uiConCarga.SetActive(tieneCarga);
-        if (uiSinCarga != null) uiSinCarga.SetActive(!tieneCarga);
+        if (actual != null)
+        {
+            OnUIData?.Invoke(new PisoUIData
+            {
+                imagen = actual.imagenPiso,
+                nombre = actual.id,
+                level = actual.level,
+                ingresable = actual.esIngresable,
+                sceneName = actual.sceneName
+            });
+        }
+        else
+        {
+            OnUIData?.Invoke(null);
+        }
     }
 
     public void Deseleccionar(VRSelectable item)
@@ -41,8 +50,8 @@ public class VRSeleccionManager : MonoBehaviour
         {
             actual.SetActivo(false);
             actual = null;
-            escenaPendiente = null;
-            OcultarUIs();
+            if (menuRoot != null) menuRoot.SetActive(false);
+            OnUIData?.Invoke(null);
         }
     }
 
@@ -50,33 +59,7 @@ public class VRSeleccionManager : MonoBehaviour
     {
         if (actual != null) actual.SetActivo(false);
         actual = null;
-        escenaPendiente = null;
-        OcultarUIs();
-    }
-
-    public void CargarEscenaSeleccionada()
-    {
-        if (!string.IsNullOrEmpty(escenaPendiente))
-            SceneManager.LoadScene(escenaPendiente);
-    }
-
-    private void OcultarUIs()
-    {
-        if (uiConCarga != null) uiConCarga.SetActive(false);
-        if (uiSinCarga != null) uiSinCarga.SetActive(false);
-    }
-
-    private bool TryGetSceneForId(string id, out string sceneName)
-    {
-        for (int i = 0; i < idsConCarga.Count; i++)
-        {
-            if (idsConCarga[i].id == id)
-            {
-                sceneName = idsConCarga[i].sceneName;
-                return true;
-            }
-        }
-        sceneName = null;
-        return false;
+        if (menuRoot != null) menuRoot.SetActive(false);
+        OnUIData?.Invoke(null);
     }
 }

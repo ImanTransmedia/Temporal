@@ -1,41 +1,61 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class VRSelectable : MonoBehaviour
 {
-    public string id = "piso_0";
-    public GameObject objetoActivar;
-    private VRSeleccionManager manager;
+    public string id = "Piso_0";
+    public GameObject highlight;
+
+    public Sprite imagenPiso;
+    public int level;
+    public bool esIngresable;
+    public string sceneName;
+
+    [Header("Trigger")]
+    public bool usarTriggers = true;
+    public string tagMano = "VRHand";
+    public LayerMask capasMano = ~0;
+
+    Collider col;
 
     void Awake()
     {
-        manager = FindObjectOfType<VRSeleccionManager>();
+        col = GetComponent<Collider>();
+        if (usarTriggers && col != null) col.isTrigger = true;
     }
 
     public void Seleccionar()
     {
-        if (manager != null) manager.Seleccionar(this);
+        var m = FindFirstObjectByType<VRSeleccionManager>();
+        if (m != null) m.Seleccionar(this);
     }
 
     public void Deseleccionar()
     {
-        if (manager != null) manager.Deseleccionar(this);
+        var m = FindFirstObjectByType<VRSeleccionManager>();
+        if (m != null) m.Deseleccionar(this);
     }
 
     public void SetActivo(bool activo)
     {
-        if (objetoActivar != null) objetoActivar.SetActive(activo);
+        if (highlight != null) highlight.SetActive(activo);
     }
 
-    // ADAPTADORES PARA DIFERENTES EVENTOS
+    void OnTriggerEnter(Collider other)
+    {
+        if (!usarTriggers) return;
+        if (CumpleFiltro(other)) Seleccionar();
+    }
 
-    // Meta XR Interaction SDK: InteractableUnityEventWrapper -> WhenSelect / WhenUnselect (sin parametros)
-    public void OnWhenSelect() { Seleccionar(); }
-    public void OnWhenUnselect() { Deseleccionar(); }
+    void OnTriggerExit(Collider other)
+    {
+        if (!usarTriggers) return;
+        //if (CumpleFiltro(other)) Deseleccionar();
+    }
 
-    // Eventos que envian bool (true seleccionado / false no)
-    public void OnBoolChanged(bool v) { if (v) Seleccionar(); else Deseleccionar(); }
-
-    // XR Interaction Toolkit (XRI) selectEntered/selectExited
-    public void OnXRISelectEntered(object _args) { Seleccionar(); }
-    public void OnXRISelectExited(object _args) { Deseleccionar(); }
+    bool CumpleFiltro(Collider other)
+    {
+        if (!string.IsNullOrEmpty(tagMano) && other.CompareTag(tagMano)) return true;
+        return ((1 << other.gameObject.layer) & capasMano) != 0;
+    }
 }
