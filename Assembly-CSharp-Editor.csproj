@@ -1395,12 +1395,12 @@
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.Settings.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Oculus.Haptics.Editor">
-      <HintPath>Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meta.Wit.Composer.Editor">
       <HintPath>Library\ScriptAssemblies\Meta.Wit.Composer.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oculus.Haptics.Editor">
+      <HintPath>Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Editor">
@@ -1423,12 +1423,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Oculus.Interaction.InterfaceSupport">
-      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.CoreUtils.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oculus.Interaction.InterfaceSupport">
+      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">

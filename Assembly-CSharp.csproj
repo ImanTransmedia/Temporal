@@ -1112,10 +1112,6 @@
       <HintPath>Library\ScriptAssemblies\Meta.XR.MultiplayerBlocks.Shared.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Oculus.Interaction.UnityXR">
-      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.UnityXR.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meta.WitAi.TTS.Editor">
       <HintPath>Library\ScriptAssemblies\Meta.WitAi.TTS.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1252,10 +1248,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meta.XR.Editor.PlayCompanion">
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.PlayCompanion.dll</HintPath>
       <Private>False</Private>
@@ -1290,10 +1282,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VoiceSDK.Runtime.Composer">
@@ -1344,16 +1332,12 @@
       <HintPath>Library\ScriptAssemblies\Meta.XR.Editor.Settings.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Oculus.Haptics.Editor">
-      <HintPath>Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meta.Wit.Composer.Editor">
       <HintPath>Library\ScriptAssemblies\Meta.Wit.Composer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
+    <Reference Include="Oculus.Haptics.Editor">
+      <HintPath>Library\ScriptAssemblies\Oculus.Haptics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Editor">
@@ -1376,12 +1360,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Oculus.Interaction.InterfaceSupport">
-      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.CoreUtils.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oculus.Interaction.InterfaceSupport">
+      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
@@ -1424,10 +1408,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Oculus.VR.Editor">
       <HintPath>Library\ScriptAssemblies\Oculus.VR.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1442,10 +1422,6 @@
     </Reference>
     <Reference Include="Oculus.VR">
       <HintPath>Library\ScriptAssemblies\Oculus.VR.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
@@ -1544,10 +1520,6 @@
       <HintPath>Library\ScriptAssemblies\VoiceSDK.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Oculus.Interaction.Samples.Editor">
       <HintPath>Library\ScriptAssemblies\Oculus.Interaction.Samples.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1562,10 +1534,6 @@
     </Reference>
     <Reference Include="Meta.XR.BuildingBlocks.Editor">
       <HintPath>Library\ScriptAssemblies\Meta.XR.BuildingBlocks.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NewAssembly">
@@ -1612,10 +1580,6 @@
       <HintPath>Library\ScriptAssemblies\Meta.WitAi.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="VoiceSDK.Runtime">
       <HintPath>Library\ScriptAssemblies\VoiceSDK.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -1638,10 +1602,6 @@
     </Reference>
     <Reference Include="Meta.XR.Audio">
       <HintPath>Library\ScriptAssemblies\Meta.XR.Audio.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Oculus.Interaction.Editor.UnityXR">
-      <HintPath>Library\ScriptAssemblies\Oculus.Interaction.Editor.UnityXR.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AssistantCoreSDKRuntime">
