@@ -6,19 +6,19 @@ public class DynamicObject : MonoBehaviour
 {
     [Header("Datos")]
     public List<Material> materiales = new List<Material>();
-    public Material materialSeleccion;           // highlight de la bolita seleccionada
-    public MeshRenderer meshObjetivo;            // mesh hijo al que se le aplica el material elegido
+    public Material materialSeleccion;           
+    public MeshRenderer meshObjetivo;            
 
     [Header("Instanciacion")]
-    public GameObject prefabBola;                // si es null se crea una esfera primitiva en runtime
-    public Transform ancla;                      // punto inicial. si es null usa este transform
-    public Vector3 direccion = Vector3.right;    // direccion de la linea
-    public float espacio = 0.25f;                // distancia entre bolitas
+    public GameObject prefabBola;                
+    public Transform ancla;                      
+    public Vector3 direccion = Vector3.right;    
+    public float espacio = 0.25f;                
     public Vector3 escalaBola = Vector3.one * 0.05f;
     public Quaternion rotacionBola = Quaternion.identity;
 
     [Header("Editor")]
-    public bool instanciarEnEditor = true;       // crea instancias en editor para debug
+    public bool instanciarEnEditor = true;      
     public bool dibujarGizmos = true;
 
     private readonly List<BolaSelectable> _bolas = new List<BolaSelectable>();
@@ -71,9 +71,14 @@ public class DynamicObject : MonoBehaviour
 
             if (prefabBola != null)
             {
-                go = Application.isPlaying
-                    ? Instantiate(prefabBola, pos, rotacionBola, _contenedor)
-                    : (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefabBola, _contenedor);
+#if UNITY_EDITOR
+                if (!Application.isPlaying)
+                    go = (GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(prefabBola, _contenedor);
+                else
+                    go = Instantiate(prefabBola, pos, rotacionBola, _contenedor);
+#else
+            go = Instantiate(prefabBola, pos, rotacionBola, _contenedor);
+#endif
                 go.transform.position = pos;
                 go.transform.rotation = rotacionBola;
             }
@@ -87,14 +92,13 @@ public class DynamicObject : MonoBehaviour
                 go.transform.position = pos;
                 go.transform.rotation = rotacionBola;
                 var col = go.GetComponent<Collider>();
-                if (col != null) col.isTrigger = true; 
+                if (col != null) col.isTrigger = true;
             }
 
             go.transform.localScale = escalaBola;
 
             var rend = go.GetComponentInChildren<Renderer>();
             if (rend == null) rend = go.AddComponent<MeshRenderer>();
-            // material inicial = material de la lista
             if (materiales[i] != null) rend.sharedMaterial = materiales[i];
 
             var sel = go.GetComponent<BolaSelectable>();
@@ -104,6 +108,7 @@ public class DynamicObject : MonoBehaviour
             _bolas.Add(sel);
         }
     }
+
 
     public void Seleccionar(BolaSelectable nuevo)
     {
@@ -116,9 +121,9 @@ public class DynamicObject : MonoBehaviour
         if (meshObjetivo != null && nuevo != null && nuevo.MaterialBase != null)
         {
             if (Application.isPlaying)
-                meshObjetivo.material = nuevo.MaterialBase;    // instancia en runtime
+                meshObjetivo.material = nuevo.MaterialBase;    
             else
-                meshObjetivo.sharedMaterial = nuevo.MaterialBase; // preview en editor
+                meshObjetivo.sharedMaterial = nuevo.MaterialBase; 
         }
     }
 
