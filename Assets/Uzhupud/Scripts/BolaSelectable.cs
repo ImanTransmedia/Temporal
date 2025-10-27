@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class BolaSelectable : MonoBehaviour
 {
     public int Indice { get; private set; }
@@ -10,7 +11,14 @@ public class BolaSelectable : MonoBehaviour
     private Material _highlightMat;
     private Material _cachedBaseMat;
 
-    // llamado por DynamicBolas al crear
+    [Header("Trigger VR")]
+    public bool usarTriggers = true;
+    public string tagMano = "VRHand";
+    public LayerMask capasMano = ~0;
+
+    Collider col;
+
+    // llamado por DynamicObject al crear
     public void Configurar(DynamicObject manager, int indice, Renderer rend, Material baseMat, Material highlightMat)
     {
         _manager = manager;
@@ -25,6 +33,9 @@ public class BolaSelectable : MonoBehaviour
             if (Application.isPlaying) _rend.material = baseMat;
             else _rend.sharedMaterial = baseMat;
         }
+
+        col = GetComponent<Collider>();
+        if (usarTriggers && col != null) col.isTrigger = true;
     }
 
     public void SetHighlight(bool on)
@@ -42,13 +53,42 @@ public class BolaSelectable : MonoBehaviour
         }
     }
 
-    // integra con tus eventos de Meta XR / XRI
-    public void Seleccionar() { if (_manager != null) _manager.Seleccionar(this); }
-    public void Deseleccionar() { if (_manager != null) _manager.Deseleccionar(this); }
+    public void Seleccionar()
+    {
+        if (_manager != null) _manager.Seleccionar(this);
+    }
 
-    public void OnBoolChanged(bool v) { if (v) Seleccionar(); else Deseleccionar(); }
-    public void OnWhenSelect() { Seleccionar(); }     // InteractableUnityEventWrapper -> WhenSelect
-    public void OnWhenUnselect() { Deseleccionar(); } // InteractableUnityEventWrapper -> WhenUnselect
+    public void Deseleccionar()
+    {
+        if (_manager != null) _manager.Deseleccionar(this);
+    }
+
+    public void OnBoolChanged(bool v)
+    {
+        if (v) Seleccionar();
+        else Deseleccionar();
+    }
+
+    public void OnWhenSelect() { Seleccionar(); }
+    public void OnWhenUnselect() { Deseleccionar(); }
     public void OnXRISelectEntered(object _) { Seleccionar(); }
     public void OnXRISelectExited(object _) { Deseleccionar(); }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!usarTriggers) return;
+        if (CumpleFiltro(other)) Seleccionar();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (!usarTriggers) return;
+        if (CumpleFiltro(other)) Deseleccionar();
+    }
+
+    bool CumpleFiltro(Collider other)
+    {
+        if (!string.IsNullOrEmpty(tagMano) && other.CompareTag(tagMano)) return true;
+        return ((1 << other.gameObject.layer) & capasMano) != 0;
+    }
 }
