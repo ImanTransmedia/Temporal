@@ -6,11 +6,51 @@ public class ControlDiaNoche : MonoBehaviour
     public Material materialNoche;
     public Renderer objetoRenderer;
     public bool usarSkybox = true;
+    public bool iniciarComoDia = true;
     public Light luzPrincipal;
     public Color colorLuzDia = Color.white;
     public Color colorLuzNoche = new Color(0.1f, 0.1f, 0.3f);
+    public float intensidadDia = 1.2f;
+    public float intensidadNoche = 0.3f;
+
+    bool esDiaActual;
+
+    void Start()
+    {
+        esDiaActual = iniciarComoDia;
+        AplicarModo(esDiaActual);
+    }
+
+    void Update()
+    {
+        bool ctrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        if (ctrl && Input.GetKeyDown(KeyCode.D))
+        {
+            esDiaActual = !esDiaActual;
+            AplicarModo(esDiaActual);
+            Debug.Log("Modo: " + (esDiaActual ? "Día" : "Noche"));
+        }
+    }
 
     public void SetModo(bool esDia)
+    {
+        esDiaActual = esDia;
+        AplicarModo(esDiaActual);
+    }
+
+    public void SetDia()
+    {
+        esDiaActual = true;
+        AplicarModo(true);
+    }
+
+    public void SetNoche()
+    {
+        esDiaActual = false;
+        AplicarModo(false);
+    }
+
+    void AplicarModo(bool esDia)
     {
         if (esDia)
         {
@@ -21,7 +61,7 @@ public class ControlDiaNoche : MonoBehaviour
             if (luzPrincipal != null)
             {
                 luzPrincipal.color = colorLuzDia;
-                luzPrincipal.intensity = 1.2f;
+                luzPrincipal.intensity = intensidadDia;
             }
         }
         else
@@ -33,7 +73,7 @@ public class ControlDiaNoche : MonoBehaviour
             if (luzPrincipal != null)
             {
                 luzPrincipal.color = colorLuzNoche;
-                luzPrincipal.intensity = 0.3f;
+                luzPrincipal.intensity = intensidadNoche;
             }
         }
     }
