@@ -55,7 +55,7 @@ public class VRSelectable : MonoBehaviour
 
     bool CumpleFiltro(Collider other)
     {
-        if (!string.IsNullOrEmpty(tagMano) && other.CompareTag(tagMano)) return true;
+        //if (!string.IsNullOrEmpty(tagMano) && other.CompareTag(tagMano)) return true;
         return ((1 << other.gameObject.layer) & capasMano) != 0;
     }
 }
