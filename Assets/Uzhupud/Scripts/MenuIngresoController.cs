@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuIngresoController : MonoBehaviour
 {
-    public Image imgPiso;
-    public TMP_Text txtNombre;
+    public RawImage imgPiso;
     public TMP_Text txtLevel;
     public GameObject botonObj;
-    public GameObject buttonEnter;
 
     public Transform referenciaOrientacion;
     public bool autoOrientar = true;
@@ -46,16 +44,14 @@ public class MenuIngresoController : MonoBehaviour
     {
         if (data == null)
         {
-            if (imgPiso != null) imgPiso.sprite = null;
-            if (txtNombre != null) txtNombre.text = "";
+            if (imgPiso != null) imgPiso.texture = null;
             if (txtLevel != null) txtLevel.text = "";
             if (botonObj != null) botonObj.SetActive(false);
             escenaObjetivo = "";
             return;
         }
 
-        if (imgPiso != null) imgPiso.sprite = data.imagen;
-        if (txtNombre != null) txtNombre.text = data.nombre;
+        if (imgPiso != null) imgPiso.texture = data.imagen;
         if (txtLevel != null) txtLevel.text = "Nivel " + data.level;
 
         if (botonObj != null) botonObj.SetActive(data.ingresable);

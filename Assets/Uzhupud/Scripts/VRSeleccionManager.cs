@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class PisoUIData
 {
-    public Sprite imagen;
+    public Texture imagen;
     public string nombre;
     public int level;
     public bool ingresable;

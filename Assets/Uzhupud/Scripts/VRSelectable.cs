@@ -1,27 +1,28 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
 public class VRSelectable : MonoBehaviour
 {
     public string id = "Piso_0";
     public GameObject highlight;
-
-    public Sprite imagenPiso;
+    public Texture imagenPiso;
     public int level;
     public bool esIngresable;
     public string sceneName;
+    public bool isSelected = false;
 
-    [Header("Trigger")]
-    public bool usarTriggers = true;
-    public string tagMano = "VRHand";
-    public LayerMask capasMano = ~0;
 
-    Collider col;
-
-    void Awake()
+    public void TogleSelected()
     {
-        col = GetComponent<Collider>();
-        if (usarTriggers && col != null) col.isTrigger = true;
+        if (isSelected)
+        {
+            Deseleccionar();
+            isSelected = false;
+        }
+        else
+        {
+            Seleccionar();
+            isSelected = true;
+        }
     }
 
     public void Seleccionar()
@@ -41,21 +42,4 @@ public class VRSelectable : MonoBehaviour
         if (highlight != null) highlight.SetActive(activo);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (!usarTriggers) return;
-        if (CumpleFiltro(other)) Seleccionar();
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (!usarTriggers) return;
-        //if (CumpleFiltro(other)) Deseleccionar();
-    }
-
-    bool CumpleFiltro(Collider other)
-    {
-        //if (!string.IsNullOrEmpty(tagMano) && other.CompareTag(tagMano)) return true;
-        return ((1 << other.gameObject.layer) & capasMano) != 0;
-    }
 }
