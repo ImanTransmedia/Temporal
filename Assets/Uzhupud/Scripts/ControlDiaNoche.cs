@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ControlDiaNoche : MonoBehaviour
@@ -12,6 +13,12 @@ public class ControlDiaNoche : MonoBehaviour
     public Color colorLuzNoche = new Color(0.1f, 0.1f, 0.3f);
     public float intensidadDia = 1.2f;
     public float intensidadNoche = 0.3f;
+
+    [Header("Control de texto e iconos")]
+    [SerializeField] private TextMeshProUGUI textoModo;
+    [SerializeField] private GameObject iconoDia;
+    [SerializeField] private GameObject iconoNoche;
+
 
     bool esDiaActual;
 
@@ -29,6 +36,14 @@ public class ControlDiaNoche : MonoBehaviour
             esDiaActual = !esDiaActual;
             AplicarModo(esDiaActual);
             Debug.Log("Modo: " + (esDiaActual ? "Día" : "Noche"));
+        }
+
+        // Actualizar texto e iconos
+        if (textoModo != null)
+        {
+            textoModo.text = esDiaActual ? "Día" : "Noche";
+            iconoDia.SetActive(esDiaActual);
+            iconoNoche.SetActive(!esDiaActual);
         }
     }
 
