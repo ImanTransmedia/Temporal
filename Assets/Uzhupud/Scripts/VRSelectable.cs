@@ -35,6 +35,7 @@ public class VRSelectable : MonoBehaviour
     {
         var m = FindFirstObjectByType<VRSeleccionManager>();
         if (m != null) m.Deseleccionar(this);
+        isSelected = false;
     }
 
     public void SetActivo(bool activo)
