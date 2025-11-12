@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ControlRotacion : MonoBehaviour
+public class ControlTransform : MonoBehaviour
 {
     public Transform objeto;
     public Vector3 eje = Vector3.up;
@@ -9,5 +9,11 @@ public class ControlRotacion : MonoBehaviour
     {
         if (objeto != null)
             objeto.localRotation = Quaternion.Euler(eje * valor);
+    }
+
+    public void Escalar(float valor)
+    {
+        if (objeto != null)
+            objeto.localScale = Vector3.one * valor;
     }
 }
