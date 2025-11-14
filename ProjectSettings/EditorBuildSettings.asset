@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Uzhupud/Scenes/Departamento2/Departamento2.unity
     guid: 2c7034ac47d131046ac9411c4cc95fa3
+  - enabled: 1
+    path: Assets/Uzhupud/Scenes/Departamento1/DEPT1_Colliders.unity
+    guid: 1137977bf6db40d428000c4174844f89
+  - enabled: 1
+    path: Assets/Uzhupud/Scenes/Departamento2/DEPT2_Colliders.unity
+    guid: 19615b0f498f6cd4f92be23f68753ed8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c65d5121ebe41ba4382f146ddb15ff16, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
