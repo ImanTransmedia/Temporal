@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Uzhupud\Scripts\MenuIngresoController.cs" />
+    <Compile Include="Assets\Uzhupud\Scripts\AdditiveSceneLoader.cs" />
     <Compile Include="Assets\Uzhupud\Scripts\ControlPisos.cs" />
     <Compile Include="Assets\Uzhupud\Scripts\ControlDiaNoche.cs" />
     <Compile Include="Assets\Uzhupud\Scripts\BolaSelectable.cs" />
