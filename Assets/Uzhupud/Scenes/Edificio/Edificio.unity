@@ -29615,7 +29615,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.033333335
   m_MinRegionArea: 3
   m_NavMeshData: {fileID: 23800000, guid: 1ce5ff482ef968348b608cc95d1bd97b, type: 2}
   m_BuildHeightMesh: 0
@@ -47751,9 +47751,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935914407428291989, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1529444759673465303, guid: 2300110694917254cbd8081f597f5813, type: 3}
       propertyPath: m_Name
       value: Maqueta
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356100538660827759, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416319501117142387, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3367823392180112453, guid: 2300110694917254cbd8081f597f5813, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47794,6 +47806,34 @@ PrefabInstance:
     - target: {fileID: 3367823392180112453, guid: 2300110694917254cbd8081f597f5813, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239276202284165138, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925065614193517903, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966880250884032184, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986094523889542040, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280047841232250155, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419623984537837555, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030719715663574003, guid: 2300110694917254cbd8081f597f5813, type: 3}
+      propertyPath: level
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9125323259943063139, guid: 2300110694917254cbd8081f597f5813, type: 3}
       propertyPath: menuRoot
