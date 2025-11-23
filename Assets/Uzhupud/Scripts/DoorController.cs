@@ -8,6 +8,13 @@ public class DoorController : MonoBehaviour
     [SerializeField] private float duration = 0.25f;
     [SerializeField] private bool startOpen = false;
 
+    [Header ("Picaporte")]
+
+    [SerializeField] private GameObject PicaporteRef;
+    [SerializeField] private Material PicaporteMat;
+    [SerializeField] private Material PicaporteHighLight;
+
+
     public bool IsOpen { get; private set; }
 
     private Quaternion closedRotation;
@@ -19,6 +26,7 @@ public class DoorController : MonoBehaviour
         closedRotation = transform.localRotation;
         Vector3 axis = localAxis == Vector3.zero ? Vector3.up : localAxis.normalized;
         openRotation = closedRotation * Quaternion.AngleAxis(openAngle, axis);
+        PicaporteRef.GetComponent<Renderer>().material = PicaporteHighLight;
 
         if (startOpen)
         {
@@ -31,6 +39,8 @@ public class DoorController : MonoBehaviour
             IsOpen = false;
         }
     }
+
+
 
     public void ToggleIsOpen()
     {
@@ -61,6 +71,8 @@ public class DoorController : MonoBehaviour
         Quaternion start = transform.localRotation;
         float t = 0f;
 
+        Debug.Log("Comenzando rotación puerta " + name);
+
         while (t < 1f)
         {
             t += Time.deltaTime / duration;
@@ -71,14 +83,14 @@ public class DoorController : MonoBehaviour
         transform.localRotation = target;
         IsOpen = finalState;
         rotatingCo = null;
-    }
 
-    void OnValidate()
-    {
-        if (!Application.isPlaying)
+        if (IsOpen)
         {
-            Vector3 axis = localAxis == Vector3.zero ? Vector3.up : localAxis.normalized;
-            openRotation = Quaternion.AngleAxis(openAngle, axis);
+            PicaporteRef.GetComponent<Renderer>().material = PicaporteMat;
+            PicaporteRef.GetComponent<Collider>().enabled = false;
         }
+
+        Debug.Log("Rotación terminada puerta " + name);
+
     }
 }
