@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1060.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 377
+  controlID: 119
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,12 +140,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1410.4
+    width: 1532
     height: 1004.80005
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 180
+  controlID: 1345
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -166,12 +166,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1410.4
-    height: 766.4
+    width: 1532
+    height: 696.8
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 181
+  controlID: 48
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -190,8 +190,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 316.8
-    height: 766.4
+    width: 344
+    height: 696.8
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
@@ -214,10 +214,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 316.8
+    x: 344
     y: 0
-    width: 1093.6001
-    height: 766.4
+    width: 1188
+    height: 696.8
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 12}
@@ -236,26 +236,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: DebugWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 766.4
-    width: 1410.4
-    height: 238.40002
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 15}
+    y: 696.8
+    width: 1532
+    height: 308.00006
+  m_MinSize: {x: 51, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 4
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,9 +271,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1410.4
+    x: 1532
     y: 0
-    width: 637.6
+    width: 516
     height: 1004.80005
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
@@ -305,10 +305,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 317.8
-    y: 24
-    width: 1091.6001
-    height: 740.4
+    x: 344
+    y: 79.200005
+    width: 1186
+    height: 670.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -407,12 +407,12 @@ MonoBehaviour:
       displayed: 1
       id: Orientation
       index: 0
-      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-230.0,"y":165.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":1,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-230.0,"y":-216.60000610351563},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: -230, y: 165}
+      snapOffset: {x: -230, y: -216.6}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       layout: 4
       size: {x: 0, y: 0}
       sizeOverridden: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
       scrollOffset: 0
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -863,9 +863,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.1423436, y: 2.014288, z: -11.103912}
+    m_Target: {x: 24.997395, y: -1.3638203, z: -15.387189}
     speed: 2
-    m_Value: {x: -1.1423436, y: 2.014288, z: -11.103912}
+    m_Value: {x: 24.997395, y: -1.3638203, z: -15.387189}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -911,13 +911,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.03256051, y: 0.30416077, z: -0.010451986, w: 0.9522717}
+    m_Target: {x: 0.05651886, y: 0.7560911, z: -0.06447239, w: 0.6496144}
     speed: 2
-    m_Value: {x: -0.03256051, y: -0.30416077, z: 0.010451986, w: -0.9522717}
+    m_Value: {x: 0.05586399, y: 0.75422066, z: -0.063397825, w: 0.65116143}
   m_Size:
-    m_Target: 0.103405945
+    m_Target: 19.966661
     speed: 2
-    m_Value: 0.103405945
+    m_Value: 19.966648
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -973,9 +973,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
-    width: 315.8
-    height: 740.4
+    y: 79.200005
+    width: 343
+    height: 670.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -989,10 +989,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5af9fffffcf9ffff5ede000070de0000
+      scrollPos: {x: 0, y: 9446.2}
+      m_SelectedIDs: 400dffff
+      m_LastClickedID: -62144
+      m_ExpandedIDs: 72edfeff96eefeffeaf3feff6008ffff3e0dffff9c0fffff143cffffdec2ffff5accffff5cd6ffff56f8fffffcf9ffff66de00009e290100642a0100a62a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1140,9 +1140,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 790.4
-    width: 1409.4
-    height: 212.40002
+    y: 776
+    width: 1531
+    height: 282.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1165,7 +1165,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Uzhupud/Assets/3D/Departamento1
+    - Assets/Uzhupud/Materials
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1175,16 +1175,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Uzhupud/Assets/3D/Departamento1
+  - Assets/Uzhupud/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\Temporal
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 287.59998}
-    m_SelectedIDs: 6cfe0000
-    m_LastClickedID: 65132
-    m_ExpandedIDs: 00000000c6e10000c8e10000cae10000cce10000cee10000
+    scrollPos: {x: 0, y: 271}
+    m_SelectedIDs: 82e60000
+    m_LastClickedID: 59010
+    m_ExpandedIDs: 0000000036e3000038e300003ae300003ce300003ee300001ae600005ce6000082e60000820701005455010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1213,7 +1213,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c6e10000c8e10000cae10000cce10000cee10000
+    m_ExpandedIDs: 0000000036e3000038e300003ae300003ce300003ee30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300004e590100526c01002054010020f500009adf0000f8df0000
+    m_ExpandedInstanceIDs: c62300004e590100526c01002054010020f500009adf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1267,7 +1267,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 244.99994}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1329,9 +1329,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 845.60004
-    width: 1409.4
-    height: 212.40002
+    y: 776
+    width: 1531
+    height: 282.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1344,8 +1344,187 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_WidgetStates:
-    m_Keys: []
-    m_Values: []
+    m_Keys:
+    - Display Stats -> Frame Stats
+    - Display Stats -> Bottlenecks
+    - Display Stats -> Detailed Stats
+    - Display Stats -> Detailed Stats -> Update every second with average
+    - Display Stats -> Detailed Stats -> Hide empty scopes
+    - Display Stats -> Detailed Stats -> Profiling Scopes
+    - Frequently Used -> Rendering Debug
+    - Frequently Used -> Rendering Debug -> Map Overlays
+    - Frequently Used -> Rendering Debug -> STP Debug Views
+    - Frequently Used -> Rendering Debug ->  -> Map Size
+    - Frequently Used -> Rendering Debug -> HDR
+    - Frequently Used -> Rendering Debug -> MSAA
+    - Frequently Used -> Rendering Debug -> TAA Debug Mode
+    - Frequently Used -> Rendering Debug -> Post-processing
+    - Frequently Used -> Rendering Debug -> Additional Wireframe Modes
+    - Frequently Used -> Rendering Debug -> Overdraw Mode
+    - Frequently Used -> Rendering Debug ->  -> Max Overdraw Count
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming -> Disable Mip Caching
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming -> Debug View
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  -> Debug Opacity
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  -> Material Texture
+      Slot
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  -> Combined per
+      Material
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  ->  -> Material
+      Texture Slot
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  ->  -> Display Status
+      Codes
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  -> Terrain Texture
+    - Frequently Used -> Rendering Debug -> Mipmap Streaming ->  -> Activity Timespan
+    - Frequently Used -> Material Filters
+    - Frequently Used -> Material Filters -> Material Override
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Rendering Layers by Light
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Use
+      Light's Shadow Layer Mask
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Default
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 1
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 2
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 3
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 4
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 5
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 6
+    - Frequently Used -> Material Filters -> Rendering Layer Masks Settings -> Filter
+      Layers -> Layers Color -> Light Layer 7
+    - Frequently Used -> Material Filters -> Vertex Attribute
+    - Frequently Used -> Lighting Debug Modes
+    - Frequently Used -> Lighting Debug Modes -> Lighting Debug Mode
+    - Frequently Used -> Lighting Debug Modes -> HDR Debug Mode
+    - Frequently Used -> Lighting Debug Modes -> Lighting Features
+    - Rendering -> Pixel Validation
+    - Rendering -> Pixel Validation -> Pixel Validation Mode
+    - Rendering -> Pixel Validation -> Pixel Range Settings -> Channels
+    - Rendering -> Pixel Validation -> Pixel Range Settings -> Value Range Min
+    - Rendering -> Pixel Validation -> Pixel Range Settings -> Value Range Max
+    - Rendering -> HDR Output
+    - Material -> Material Validation
+    - Material -> Material Validation -> Material Validation Mode
+    - Material -> Material Validation -> Albedo Settings -> Validation Preset
+    - Material -> Material Validation -> Albedo Settings -> Target Color
+    - Material -> Material Validation -> Albedo Settings -> Min Luminance
+    - Material -> Material Validation -> Albedo Settings -> Max Luminance
+    - Material -> Material Validation -> Albedo Settings -> Hue Tolerance
+    - Material -> Material Validation -> Albedo Settings -> Saturation Tolerance
+    - Material -> Material Validation -> Metallic Settings -> Min Value
+    - Material -> Material Validation -> Metallic Settings -> Max Value
+    - GPU Resident Drawer -> Occlusion Culling -> Occlusion Test Overlay
+    - GPU Resident Drawer -> Occlusion Culling -> Occlusion Test Overlay Count Visible
+    - GPU Resident Drawer -> Occlusion Culling -> Override Occlusion Test To Always
+      Pass
+    - GPU Resident Drawer -> Occlusion Culling -> Occluder Context Stats
+    - GPU Resident Drawer -> Occlusion Culling -> Occluder Debug View
+    - GPU Resident Drawer -> Occlusion Culling -> Occluder Debug View Index
+    - GPU Resident Drawer -> Occlusion Culling -> Occluder Debug View Range Min
+    - GPU Resident Drawer -> Occlusion Culling -> Occluder Debug View Range Max
+    - GPU Resident Drawer -> Occlusion Context Stats
+    - GPU Resident Drawer -> GPU Resident Drawer Settings -> Display Culling Stats
+    - GPU Resident Drawer -> Instance Culler Stats
+    - GPU Resident Drawer -> Instance Culler Stats -> Per View Stats
+    - GPU Resident Drawer -> Instance Culler Stats -> Occlusion Culling Events
+    - Render Graph -> URPRenderGraph Render Graph -> Clear Render Targets At Creation
+    - Render Graph -> URPRenderGraph Render Graph -> Clear Render Targets When Freed
+    - Render Graph -> URPRenderGraph Render Graph -> Disable Pass Culling
+    - Render Graph -> URPRenderGraph Render Graph -> Immediate Mode
+    - Render Graph -> URPRenderGraph Render Graph -> Enable Logging
+    - Volume -> Camera
+    - Volume -> Component
+    m_Values:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   m_Settings: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -1369,9 +1548,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 790
-    width: 1321
-    height: 196
+    y: 650.4
+    width: 1409.4
+    height: 407.60004
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1406,9 +1585,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 775.2
-    width: 1409.4
-    height: 282.80005
+    y: 776
+    width: 1531
+    height: 282.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1441,9 +1620,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1411.4
-    y: 24
-    width: 636.6
+    x: 1532
+    y: 79.200005
+    width: 515
     height: 978.80005
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1490,9 +1669,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Lighting\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1410.4
+    x: 1532
     y: 79.200005
-    width: 636.6
+    width: 515
     height: 978.80005
   m_SerializedDataModeController:
     m_DataMode: 0
