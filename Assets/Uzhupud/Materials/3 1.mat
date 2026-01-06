@@ -60,6 +60,7 @@ Material:
     - _Metallic: 0
     - _QueueOffset: 0
     - _Smoothness: 0.888
+    - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 0
     - _ZWrite: 1
