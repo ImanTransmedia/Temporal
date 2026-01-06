@@ -24,6 +24,11 @@ TagManager:
   - QDSUIDestructiveButton
   - SamplesInfoPanel
   - VRHand
+  - Locomotion
+  - PassThroughButton
+  - LocoButton
+  - LocoText
+  - PassThrough
   layers:
   - Default
   - TransparentFX
@@ -34,7 +39,7 @@ TagManager:
   - TransparentFX
   - WalkableSurface
   - Volume
-  - 
+  - Piso
   - 
   - 
   - 
