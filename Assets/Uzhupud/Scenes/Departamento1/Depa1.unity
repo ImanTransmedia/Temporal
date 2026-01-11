@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7f67ceb7e0edaf7459116ff4de3a3928, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 6a89c5daac7643e49a6c49bb8f73f442, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e191ef2da8c265c418eb84e1cf71c3a0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2010,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2022,7 +2022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4426,7 +4426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.028161122
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4434,7 +4434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.99960345
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4446,7 +4446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -183.227
       objectReference: {fileID: 0}
     - target: {fileID: 4397664628265918113, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10971,7 +10971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.568
+      value: 0.557
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14542,7 +14542,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 1
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 7fd388d9a5d0c46499d91d483ea29b98, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 716339ba6f3be414ca16e9bf485871a6, type: 2}
 --- !u!4 &1453045255
 Transform:
   m_ObjectHideFlags: 0
@@ -19164,7 +19164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.413
+      value: 0.692
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20080,7 +20080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.413
+      value: 0.708
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fe85aa2262c92d4284769fcbb5ba3d4, type: 3}
       propertyPath: m_LocalPosition.z
