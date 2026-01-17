@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue
+  m_Name: MuestraGray
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 740ee4049d5136b44bceba75de343d57, type: 2}
   m_ModifiedSerializedProperties: 2
@@ -38,9 +38,9 @@ Material:
     m_Floats:
     - _Smoothness: 0.5
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.90769243, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.90769243, b: 1, a: 1}
-    - _EmissionColor: {r: 0.4040905, g: 0.07929868, b: 0.6226415, a: 1}
+    - _BaseColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    - _Color: {r: 0.53773576, g: 0.53773576, b: 0.53773576, a: 1}
+    - _EmissionColor: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4360813183891051095

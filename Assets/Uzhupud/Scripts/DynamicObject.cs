@@ -7,7 +7,7 @@ public class DynamicObject : MonoBehaviour
     [Header("Datos")]
     public List<Material> materiales = new List<Material>();
     public Material materialSeleccion;           
-    public MeshRenderer meshObjetivo;            
+    public MeshRenderer [] meshObjetivo;            
 
     [Header("Instanciacion")]
     public GameObject prefabBola;                
@@ -118,14 +118,20 @@ public class DynamicObject : MonoBehaviour
         _actual = nuevo;
         if (_actual != null) _actual.SetHighlight(true);
 
-        if (meshObjetivo != null && nuevo != null && nuevo.MaterialBase != null)
+        if (meshObjetivo == null || nuevo == null || nuevo.MaterialBase == null) return;
+
+        for (int i = 0; i < meshObjetivo.Length; i++)
         {
+            var mr = meshObjetivo[i];
+            if (mr == null) continue;
+
             if (Application.isPlaying)
-                meshObjetivo.material = nuevo.MaterialBase;    
+                mr.material = nuevo.MaterialBase;       
             else
-                meshObjetivo.sharedMaterial = nuevo.MaterialBase; 
+                mr.sharedMaterial = nuevo.MaterialBase;  
         }
     }
+
 
     public void Deseleccionar(BolaSelectable item)
     {

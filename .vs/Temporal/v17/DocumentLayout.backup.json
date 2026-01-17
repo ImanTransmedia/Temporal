@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72AD58D2-8676-54EE-D85D-A8323F39F52B}|Assembly-CSharp.csproj|c:\\users\\omars\\desktop\\temporal\\temporal\\assets\\uzhupud\\scripts\\dynamicobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72AD58D2-8676-54EE-D85D-A8323F39F52B}|Assembly-CSharp.csproj|solutionrelative:assets\\uzhupud\\scripts\\dynamicobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DynamicObject.cs",
+              "DocumentMoniker": "C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\Assets\\Uzhupud\\Scripts\\DynamicObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Uzhupud\\Scripts\\DynamicObject.cs",
+              "ToolTip": "C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\Assets\\Uzhupud\\Scripts\\DynamicObject.cs",
+              "RelativeToolTip": "Assets\\Uzhupud\\Scripts\\DynamicObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T01:14:01.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OculusHand.shader",
+              "DocumentMoniker": "C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader",
+              "ToolTip": "C:\\Users\\omars\\Desktop\\TEMPORAL\\Temporal\\Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader",
+              "RelativeToolTip": "Library\\PackageCache\\com.meta.xr.sdk.interaction@be53de53710b\\Runtime\\Shaders\\OculusHand.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-01-16T20:17:43.187Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
